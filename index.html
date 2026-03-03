@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Alpha Plomberie — Plombier chauffagiste Ingré &amp; Orléans</title>
+<meta name="description" content="Alpha Plomberie, artisan plombier chauffagiste à Ingré. Fuite, débouchage, chaudières, chauffe-eau, salle de bains. Devis gratuit, intervention rapide."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#F4F1EC;color:#141414;line-height:1.55;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+:root{
+  --cream:#F4F1EC;--black:#141414;--navy:#1B3553;
+  --muted:#7A8A96;--line:#D8D3CC;--white:#FFFFFF;
+  --serif:'Fraunces',Georgia,serif;
+}
+
+/* SCROLL REVEAL */
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-reveal="left"]{transform:translateX(-30px)}
+[data-reveal="right"]{transform:translateX(30px)}
+[data-reveal].on{opacity:1;transform:none}
+[data-d="1"]{transition-delay:.1s}[data-d="2"]{transition-delay:.2s}[data-d="3"]{transition-delay:.3s}
+[data-d="4"]{transition-delay:.4s}[data-d="5"]{transition-delay:.5s}[data-d="6"]{transition-delay:.6s}
+
+/* TOPBAR */
+.topbar{background:var(--navy);color:rgba(255,255,255,.65);font-size:.74rem;letter-spacing:.06em;text-align:center;padding:.5rem 1.5rem}
+.topbar a{color:#fff;font-weight:500}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(244,241,236,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--black)}
+.nav-logo em{color:var(--navy);font-weight:300;font-style:italic}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.83rem;color:var(--muted);letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-phone{font-size:.88rem;font-weight:500;color:var(--navy)}
+.btn-nav{background:var(--black);color:#fff;border-radius:3px;padding:.55rem 1.2rem;font-size:.8rem;font-weight:500;letter-spacing:.03em;transition:background .2s}
+.btn-nav:hover{background:var(--navy)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--black)}
+.mob{display:none;flex-direction:column;background:var(--cream);border-top:1px solid var(--line);padding:1.5rem 2rem;gap:.9rem}
+.mob.open{display:flex}
+.mob a{font-size:.95rem;color:var(--black);padding:.3rem 0;border-bottom:1px solid var(--line)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;height:420px;margin-top:1.5rem}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:2rem 2.5rem 2rem 5%;background:var(--cream);height:100%}
+.tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
+.tag::before{content:'';display:block;width:26px;height:1px;background:currentColor}
+.hero-h1{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:600;line-height:1.08;letter-spacing:-.03em;color:var(--black);margin-bottom:.8rem}
+.hero-h1 em{font-style:italic;font-weight:300;color:var(--navy)}
+.hero-body{font-size:.85rem;line-height:1.65;color:var(--muted);font-weight:300;max-width:340px;margin-bottom:1.2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-p{background:var(--black);color:#fff;border-radius:3px;padding:.6rem 1.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;transition:background .25s,transform .15s;display:inline-block}
+.btn-p:hover{background:var(--navy);transform:translateY(-1px)}
+.btn-o{border:1px solid var(--line);color:var(--black);border-radius:3px;padding:.6rem 1.4rem;font-size:.8rem;font-weight:400;letter-spacing:.04em;transition:border-color .2s,color .2s;display:inline-block}
+.btn-o:hover{border-color:var(--navy);color:var(--navy)}
+.stats{display:flex;gap:1.5rem;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.stat-n{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--black);letter-spacing:-.04em;display:block}
+.stat-l{font-size:.65rem;font-weight:400;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.1rem;display:block}
+.hero-right{position:relative;overflow:hidden;height:100%}
+.hero-right img{height:100%;width:100%;object-fit:cover;object-position:35% center;will-change:transform}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(244,241,236,.1),transparent 35%)}
+
+/* SECTIONS */
+.section{padding:6rem 2rem}
+.container{max-width:1200px;margin:0 auto}
+.sec-tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
+.sec-tag::before{content:'';display:block;width:20px;height:1px;background:currentColor}
+.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.7rem);font-weight:600;line-height:1.1;letter-spacing:-.025em;color:var(--black)}
+.sec-title em{font-style:italic;font-weight:300;color:var(--navy)}
+.sec-body{font-size:.97rem;line-height:1.75;color:var(--muted);font-weight:300;max-width:480px;margin-top:.9rem}
+
+/* SERVICES */
+.services-section{background:var(--white)}
+.srv-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.scard{background:var(--white);overflow:hidden;position:relative;transition:box-shadow .3s}
+.scard:hover{box-shadow:0 20px 50px rgba(0,0,0,.1);z-index:1}
+.scard-img{height:220px;overflow:hidden}
+.scard-img img{height:100%;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.scard:hover .scard-img img{transform:scale(1.07)}
+.scard-body{padding:1.8rem}
+.scard-num{font-family:var(--serif);font-size:.82rem;color:var(--muted);margin-bottom:.8rem;font-weight:300}
+.scard-title{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--black);margin-bottom:.55rem;letter-spacing:-.01em}
+.scard-text{font-size:.84rem;line-height:1.65;color:var(--muted);font-weight:300}
+.scard-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.2rem;font-size:.78rem;font-weight:500;color:var(--navy);letter-spacing:.05em;text-transform:uppercase;transition:gap .25s}
+.scard-link::after{content:'→'}
+.scard-link:hover{gap:.7rem}
+
+/* ABOUT */
+.about-section{background:var(--cream)}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.aimg-wrap{position:relative}
+.aimg-main{height:580px;overflow:hidden;border-radius:2px}
+.aimg-main img{height:100%}
+.abadge{position:absolute;bottom:-2rem;right:-2rem;background:var(--navy);color:#fff;padding:1.8rem 2rem;text-align:center}
+.abadge-n{font-family:var(--serif);font-size:2.6rem;font-weight:600;display:block;letter-spacing:-.04em}
+.abadge-t{font-size:.7rem;font-weight:400;opacity:.7;letter-spacing:.09em;text-transform:uppercase;display:block;margin-top:.3rem}
+.about-list{list-style:none;margin-top:1.8rem;display:flex;flex-direction:column;gap:.95rem}
+.about-list li{display:flex;align-items:flex-start;gap:1rem;font-size:.9rem;line-height:1.65;color:var(--muted);font-weight:300}
+.about-list li::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:.65rem}
+.about-cta{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+
+/* GALLERY */
+.gallery-section{background:var(--black);padding:6rem 2rem}
+.gal-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem}
+.gal-header .sec-tag{color:rgba(255,255,255,.45)}
+.gal-header .sec-tag::before{background:rgba(255,255,255,.3)}
+.gal-header .sec-title{color:#fff}
+.gal-note{font-size:.85rem;color:rgba(255,255,255,.4);max-width:260px;line-height:1.65;font-weight:300}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:260px 200px;gap:3px}
+.gitem{overflow:hidden}
+.gitem img{height:100%;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.gitem:hover img{transform:scale(1.07)}
+.gitem.lg{grid-column:span 2;grid-row:span 2}
+
+/* WHY */
+.why-section{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3.5rem}
+.why-card{background:var(--cream);padding:2.5rem 2rem;transition:background .2s}
+.why-card:hover{background:var(--white)}
+.why-idx{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--line);display:block;margin-bottom:1.2rem;letter-spacing:-.04em}
+.why-title{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--black);margin-bottom:.55rem;letter-spacing:-.01em}
+.why-body{font-size:.84rem;line-height:1.65;color:var(--muted);font-weight:300}
+
+/* TESTIMONIAL */
+.testimonial-section{background:var(--navy);padding:8rem 2rem}
+.testimonial-inner{max-width:820px;margin:0 auto;text-align:center}
+.qmark{font-family:var(--serif);font-size:6rem;font-weight:300;color:rgba(255,255,255,.12);line-height:.7;display:block;margin-bottom:2rem}
+.qtext{font-family:var(--serif);font-size:clamp(1.15rem,2.5vw,1.75rem);font-weight:300;font-style:italic;line-height:1.6;color:rgba(255,255,255,.88);letter-spacing:-.015em}
+.qauthor{margin-top:2.2rem;font-size:.75rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+/* ZONE */
+.zone-section{background:var(--white)}
+.zone-wrap{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.zone-img{height:480px;overflow:hidden;border-radius:2px}
+.zone-img img{height:100%}
+.zone-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.5rem}
+.ztag{font-size:.74rem;color:var(--navy);background:#EFF4F9;border:1px solid #C8D9E8;border-radius:2px;padding:.28rem .75rem;letter-spacing:.02em}
+
+/* CTA */
+.cta-section{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem}
+.cta-bg{position:absolute;inset:0}
+.cta-bg img{height:100%;filter:brightness(.28)}
+.cta-inner{position:relative;z-index:1;max-width:600px}
+.cta-tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.5rem}
+.cta-tag::before{content:'';display:block;width:22px;height:1px;background:rgba(255,255,255,.35)}
+.cta-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.4rem);font-weight:600;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:.8rem}
+.cta-phone{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.9rem);font-weight:300;font-style:italic;color:#fff;display:block;margin:.5rem 0 .4rem;letter-spacing:-.02em;transition:opacity .2s}
+.cta-phone:hover{opacity:.7}
+.cta-sub{font-size:.78rem;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:2.5rem}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-w{background:#fff;color:var(--black);border-radius:3px;padding:.85rem 2rem;font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:opacity .2s;display:inline-block}
+.btn-w:hover{opacity:.85}
+.btn-g{border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:3px;padding:.85rem 2rem;font-size:.85rem;font-weight:400;letter-spacing:.04em;transition:border-color .2s;display:inline-block}
+.btn-g:hover{border-color:rgba(255,255,255,.75)}
+
+/* FOOTER */
+footer{background:#0D0D0D;color:rgba(255,255,255,.38);padding:4rem 2rem 2rem;font-size:.83rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1rem}
+.footer-brand em{font-weight:300;font-style:italic;color:rgba(255,255,255,.5)}
+.footer-desc{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.3);max-width:240px;margin-bottom:1.2rem}
+.footer-contact a{display:block;color:rgba(255,255,255,.55);line-height:2.1;transition:color .2s}
+.footer-contact a:hover{color:#fff}
+.fc h4{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.2rem}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.fc a{color:rgba(255,255,255,.32);transition:color .2s;font-size:.82rem}
+.fc a:hover{color:#fff}
+.footer-bottom{max-width:1200px;margin:2rem auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.74rem}
+.footer-bottom a{color:rgba(255,255,255,.28);transition:color .2s}
+.footer-bottom a:hover{color:rgba(255,255,255,.7)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:220px 180px}
+}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;height:auto}
+  .hero-left{padding:1.5rem;order:2;height:auto}
+  .hero-right{height:220px;order:1}
+  .about-wrap,.zone-wrap{grid-template-columns:1fr;gap:3rem}
+  .abadge{right:.5rem;bottom:.5rem}
+  .nav-links,.btn-nav,.nav-phone{display:none}
+  .hamburger{display:flex}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gitem.lg{grid-column:span 2;height:260px}
+  .gitem{height:190px}
+  .srv-header{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  .section{padding:4rem 1.5rem}
+  .srv-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .stats{gap:1.5rem}
+}
+
+.tarifs-section{background:var(--white)}
+.tarifs-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
+.tarifs-note{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.65;max-width:280px;padding:.8rem 1rem;border-left:2px solid var(--line)}
+.tarifs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:2rem}
+.tcard{background:var(--white);padding:2rem 2.2rem;transition:background .2s}
+.tcard:hover{background:var(--cream)}
+.tcard-cat{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
+.trow{display:flex;justify-content:space-between;align-items:baseline;padding:.7rem 0;border-bottom:1px solid var(--line);gap:1rem}
+.trow:last-child{border-bottom:none}
+.trow-label{font-size:.88rem;color:var(--black);font-weight:400;flex:1}
+.trow-price{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--navy);white-space:nowrap;letter-spacing:-.02em}
+.trow-price small{font-size:.7rem;font-weight:300;color:var(--muted);margin-left:.2rem}
+.urgence-banner{background:var(--navy);color:rgba(255,255,255,.85);padding:1.5rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.urgence-banner strong{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:#fff;display:block;margin-bottom:.3rem}
+.urgence-banner p{font-size:.83rem;line-height:1.55;color:rgba(255,255,255,.6);font-weight:300;max-width:400px}
+.paiement-row{display:flex;align-items:center;gap:2rem;margin-top:1.5rem;padding:1.5rem 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.pitem{display:flex;align-items:center;gap:.6rem;font-size:.83rem;color:var(--muted);font-weight:300}
+.pitem strong{color:var(--black);font-weight:500}
+.pcheck{width:18px;height:18px;border-radius:50%;background:#EFF4F9;border:1px solid #C8D9E8;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.65rem;color:var(--navy)}
+@media(max-width:860px){.tarifs-grid{grid-template-columns:1fr}.urgence-banner{flex-direction:column}}
+@media(max-width:600px){.tarifs-header{flex-direction:column}.paiement-row{gap:1rem}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Intervention rapide &mdash; Ingré, Orléans et alentours &mdash; <a href="tel:+33633302134">06 33 30 21 34</a>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">Alpha<em>Plomberie</em></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#zone">Zone</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+33633302134" class="nav-phone">06 33 30 21 34</a>
+      <a href="#contact" class="btn-nav">Devis gratuit</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mn').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob" id="mn">
+    <a href="#services" onclick="this.closest('.mob').classList.remove('open')">Services</a>
+    <a href="#realisations" onclick="this.closest('.mob').classList.remove('open')">Réalisations</a>
+    <a href="#zone" onclick="this.closest('.mob').classList.remove('open')">Zone</a>
+    <a href="#contact" onclick="this.closest('.mob').classList.remove('open')">Contact &amp; devis</a>
+    <a href="tel:+33633302134" style="color:var(--navy);font-weight:500">06 33 30 21 34</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="tag" data-reveal>Ingré &amp; métropole orléanaise</div>
+    <h1 class="hero-h1" data-reveal data-d="1">Plombier<br><em>chauffagiste</em><br>certifié</h1>
+    <p class="hero-body" data-reveal data-d="2">Fuite, débouchage, chaudières, chauffe-eau, salle de bains &mdash; intervention rapide, matériaux de qualité, devis gratuit.</p>
+    <div class="hero-actions" data-reveal data-d="3">
+      <a href="tel:+33633302134" class="btn-p">Appeler maintenant</a>
+      <a href="#services" class="btn-o">Nos services</a>
+    </div>
+    <div class="stats" data-reveal data-d="4">
+      <div><span class="stat-n">24h</span><span class="stat-l">Délai d'intervention</span></div>
+      <div><span class="stat-n">100%</span><span class="stat-l">Devis gratuit</span></div>
+      <div><span class="stat-n">Loiret</span><span class="stat-l">Zone couverte</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img id="heroImg"
+      src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20240917_135306-standard-l7tzo3.jpg"
+      alt="Plombier Alpha Plomberie en intervention" loading="eager"/>
+    <div class="hero-overlay"></div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="srv-header">
+      <div>
+        <div class="sec-tag" data-reveal>Nos prestations</div>
+        <h2 class="sec-title" data-reveal data-d="1">Plomberie &amp; chauffage,<br><em>tous vos besoins</em></h2>
+      </div>
+      <p class="sec-body" data-reveal data-d="2" style="margin-top:0;max-width:300px">Installation, réparation, entretien &mdash; matériaux Grohe, Thermor, Cedeo, résultat garanti.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="scard" data-reveal>
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/screenshot_20260110_082116_gallery-1-high.jpg?enable-io=true&enable=upscale&crop=0.8333%3A1%2Coffset-y35&width=800" alt="Installation plomberie et chauffage"/></div>
+        <div class="scard-body"><div class="scard-num">01</div><div class="scard-title">Installation plomberie &amp; chauffage</div><p class="scard-text">Installation durable et fiable, sur mesure pour chaque client. Matériaux haute qualité, satisfaction garantie.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+      <div class="scard" data-reveal data-d="1">
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/screenshot_20260110_080450_gallery-high.jpg?enable-io=true&enable=upscale&crop=0.694%3A1%2Coffset-y58&width=800" alt="Réparation fuites et débouchage"/></div>
+        <div class="scard-body"><div class="scard-num">02</div><div class="scard-title">Réparation de fuites &amp; débouchage</div><p class="scard-text">Réparation rapide et précise avec des outils de pointe. Débouchage canalisations, évier, douche, WC.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+      <div class="scard" data-reveal data-d="2">
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/chauffage-high-eyabln.webp?enable-io=true&enable=upscale&crop=0.8333%3A1%2Coffset-x17&width=800" alt="Chaudières et chauffe-eau"/></div>
+        <div class="scard-body"><div class="scard-num">03</div><div class="scard-title">Chaudières &amp; chauffe-eau</div><p class="scard-text">Installation, remplacement et entretien de chaudières gaz, adoucisseurs et chauffe-eau électriques.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+      <div class="scard" data-reveal data-d="3">
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20220719_113620-standard.jpg" alt="Rénovation salle de bains"/></div>
+        <div class="scard-body"><div class="scard-num">04</div><div class="scard-title">Rénovation salle de bains</div><p class="scard-text">Conception et réalisation complète. Robinetterie, WC, douche, baignoire &mdash; du projet à la livraison.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+      <div class="scard" data-reveal data-d="4">
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20220127_150411-standard.jpg" alt="Petits travaux de plomberie"/></div>
+        <div class="scard-body"><div class="scard-num">05</div><div class="scard-title">Petits travaux de plomberie</div><p class="scard-text">Soudures, remplacement de joints, robinetterie &mdash; chaque intervention traitée avec le même soin.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+      <div class="scard" data-reveal data-d="5">
+        <div class="scard-img"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20210316_141247-standard.jpg" alt="Adoucisseur d'eau"/></div>
+        <div class="scard-body"><div class="scard-num">06</div><div class="scard-title">Adoucisseur d'eau</div><p class="scard-text">Pose et maintenance d'adoucisseurs pour protéger vos installations et améliorer la qualité de l'eau.</p><a href="#contact" class="scard-link">Demander un devis</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about-section">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="aimg-wrap" data-reveal="left">
+        <div class="aimg-main"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/img_20200415_120720-standard-n989yk.jpg" alt="Artisan Alpha Plomberie"/></div>
+        <div class="abadge"><span class="abadge-n">+20</span><span class="abadge-t">ans de métier</span></div>
+      </div>
+      <div data-reveal="right">
+        <div class="sec-tag">Qui sommes-nous</div>
+        <h2 class="sec-title">Un artisan<br><em>à votre écoute</em></h2>
+        <p class="sec-body">Basés à Ingré (45140), nous intervenons sur toute la métropole orléanaise. Notre priorité : un travail soigné, des tarifs honnêtes, une présence réelle sur le terrain.</p>
+        <ul class="about-list">
+          <li>Intervention possible en urgence, y compris le week-end</li>
+          <li>Matériaux de grandes marques : Grohe, Thermor, Cedeo</li>
+          <li>Devis gratuit, transparent, sans engagement</li>
+          <li>Suivi complet du chantier de A à Z</li>
+          <li>Normes de sécurité scrupuleusement respectées</li>
+        </ul>
+        <div class="about-cta">
+          <a href="tel:+33633302134" class="btn-p">Nous appeler</a>
+          <a href="https://instagram.com/plombiersansfiltre/" target="_blank" rel="noopener" class="btn-o">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realisations" class="gallery-section">
+  <div class="container">
+    <div class="gal-header">
+      <div>
+        <div class="sec-tag" data-reveal>Nos réalisations</div>
+        <h2 class="sec-title" data-reveal data-d="1">Chantiers <em>en images</em></h2>
+      </div>
+      <p class="gal-note" data-reveal data-d="2">Travaux réels réalisés par notre équipe. Plus de réalisations sur Instagram et TikTok.</p>
+    </div>
+    <div class="gal-grid" data-reveal>
+      <div class="gitem lg"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20250808_121820-standard.jpg" alt="Chantier Alpha Plomberie"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/img_20200710_100538-standard.jpg" alt="Réalisation plomberie"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/img_20180928_105045-high.jpg?enable-io=true&enable=upscale&crop=0.8538%3A1&width=800" alt="Chauffage"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/fb_img_1536735997268-standard.jpg" alt="Installation"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/fb_img_1536735993730-standard.jpg" alt="Réparation"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20220127_150411-standard.jpg" alt="Travaux"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/img_20200728_155445-standard.jpg" alt="Salle de bains"/></div>
+      <div class="gitem"><img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20250808_122614-standard-flb8i1.jpg" alt="Chantier récent"/></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why-section">
+  <div class="container">
+    <div class="sec-tag" data-reveal>Nos engagements</div>
+    <h2 class="sec-title" data-reveal data-d="1">Pourquoi choisir<br><em>Alpha Plomberie</em></h2>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><span class="why-idx">01</span><div class="why-title">Réactivité</div><p class="why-body">Devis et intervention sous 24h. Les urgences prises en charge rapidement, week-end compris.</p></div>
+      <div class="why-card" data-reveal data-d="1"><span class="why-idx">02</span><div class="why-title">Transparence</div><p class="why-body">Devis gratuit et détaillé. Aucune mauvaise surprise sur la facture finale.</p></div>
+      <div class="why-card" data-reveal data-d="2"><span class="why-idx">03</span><div class="why-title">Qualité</div><p class="why-body">Matériaux de grandes marques exclusivement : Grohe, Thermor, Cedeo. Travail soigné et durable.</p></div>
+      <div class="why-card" data-reveal data-d="3"><span class="why-idx">04</span><div class="why-title">Proximité</div><p class="why-body">Artisan local ancré dans le bassin orléanais depuis des années. Nous connaissons notre territoire.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="testimonial-inner">
+    <span class="qmark" data-reveal>&#8220;</span>
+    <p class="qtext" data-reveal data-d="1">Alpha Plomberie a résolu notre problème de fuite rapidement et efficacement. Service impeccable, prix très raisonnables. Je recommande sans hésitation.</p>
+    <div class="qauthor" data-reveal data-d="2">Jean Dupont &mdash; Client vérifié</div>
+  </div>
+</section>
+
+<section id="tarifs" class="section tarifs-section">
+  <div class="container">
+    <div class="tarifs-header">
+      <div>
+        <div class="sec-tag" data-reveal>Nos tarifs</div>
+        <h2 class="sec-title" data-reveal data-d="1">Transparence totale,<br><em>sans frais cach&eacute;s</em></h2>
+      </div>
+      <div class="tarifs-note" data-reveal data-d="2">Tous nos prix sont affich&eacute;s TTC. Le tarif est confirm&eacute; avant toute intervention. Aucune mauvaise surprise.</div>
+    </div>
+    <div class="tarifs-grid">
+      <div class="tcard" data-reveal>
+        <div class="tcard-cat">D&eacute;placement &amp; main-d&apos;oeuvre</div>
+        <div class="trow"><span class="trow-label">D&eacute;placement et diagnostic</span><span class="trow-price">Gratuit <small>sur devis</small></span></div>
+        <div class="trow"><span class="trow-label">Taux horaire main-d&apos;oeuvre</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Forfait petite intervention</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Devis d&eacute;taill&eacute;</span><span class="trow-price">Gratuit</span></div>
+      </div>
+      <div class="tcard" data-reveal data-d="1">
+        <div class="tcard-cat">Plomberie courante</div>
+        <div class="trow"><span class="trow-label">Recherche et r&eacute;paration de fuite</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">D&eacute;bouchage canalisation</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Remplacement robinet &amp; joint</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Installation WC &amp; lavabo</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+      </div>
+      <div class="tcard" data-reveal>
+        <div class="tcard-cat">Chauffage</div>
+        <div class="trow"><span class="trow-label">Entretien chaudi&egrave;re gaz</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">D&eacute;pannage chaudi&egrave;re</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Remplacement chauffe-eau</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Pose adoucisseur d&apos;eau</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+      </div>
+      <div class="tcard" data-reveal data-d="1">
+        <div class="tcard-cat">R&eacute;novation</div>
+        <div class="trow"><span class="trow-label">Salle de bains compl&egrave;te</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Remplacement douche &amp; baignoire</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Installation plancher chauffant</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+        <div class="trow"><span class="trow-label">Mise aux normes installation</span><span class="trow-price">Sur devis <small>TTC</small></span></div>
+      </div>
+    </div>
+    <div class="urgence-banner" data-reveal>
+      <div><strong>Majoration urgences : +50%</strong><p>Pour les d&eacute;pannages apr&egrave;s 18h en semaine et le week-end. Le tarif major&eacute; est toujours confirm&eacute; avant intervention.</p></div>
+      <a href="tel:+33633302134" class="btn-p" style="flex-shrink:0;background:#fff;color:var(--navy)">Appeler pour un devis</a>
+    </div>
+    <div class="paiement-row" data-reveal>
+      <div class="pitem"><span class="pcheck">&#10003;</span><span>Prix <strong>affich&eacute;s TTC</strong>, aucun frais cach&eacute;</span></div>
+      <div class="pitem"><span class="pcheck">&#10003;</span><span>Paiement en <strong>4 fois sans frais</strong></span></div>
+      <div class="pitem"><span class="pcheck">&#10003;</span><span>Tarif confirm&eacute; <strong>avant intervention</strong></span></div>
+      <div class="pitem"><span class="pcheck">&#10003;</span><span>Devis <strong>gratuit &amp; sans engagement</strong></span></div>
+    </div>
+  </div>
+</section>
+<section id="zone" class="section zone-section">
+  <div class="container">
+    <div class="zone-wrap">
+      <div data-reveal="left">
+        <div class="sec-tag">Zone d'intervention</div>
+        <h2 class="sec-title">Loiret<br><em>et alentours</em></h2>
+        <p class="sec-body">Basés à Ingré (45140), nous intervenons sur tout le bassin orléanais. Contactez-nous pour vérifier votre secteur.</p>
+        <div class="zone-tags">
+          <span class="ztag">Ingré</span><span class="ztag">Orléans</span><span class="ztag">Saint-Jean-de-la-Ruelle</span>
+          <span class="ztag">La Chapelle-Saint-Mesmin</span><span class="ztag">Saran</span><span class="ztag">Fleury-les-Aubrais</span>
+          <span class="ztag">Meung-sur-Loire</span><span class="ztag">Chaingy</span><span class="ztag">Saint-Ay</span>
+          <span class="ztag">Ormes</span><span class="ztag">Saint-Jean-le-Blanc</span>
+        </div>
+        <div style="margin-top:2rem"><a href="tel:+33633302134" class="btn-p">Vérifier votre secteur</a></div>
+      </div>
+      <div class="zone-img" data-reveal="right">
+        <img src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/20240917_135306-standard-l7tzo3.jpg" alt="Zone intervention Orléans"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta-section">
+  <div class="cta-bg">
+    <img id="ctaImg" src="https://primary.jwwb.nl/public/l/j/h/temp-kipjwjetdfuuejtzhlwc/img_20200415_120720-standard.jpg" alt=""/>
+  </div>
+  <div class="cta-inner">
+    <div class="cta-tag" data-reveal>Urgence ou projet ?</div>
+    <h2 class="cta-title" data-reveal data-d="1">Parlons de votre<br>situation</h2>
+    <a href="tel:+33633302134" class="cta-phone" data-reveal data-d="2">06 33 30 21 34</a>
+    <p class="cta-sub" data-reveal data-d="3">7j/7 &mdash; Devis gratuit &mdash; Intervention sous 24h</p>
+    <div class="cta-row" data-reveal data-d="4">
+      <a href="tel:+33633302134" class="btn-w">Appel immédiat</a>
+      <a href="https://instagram.com/plombiersansfiltre/" target="_blank" rel="noopener" class="btn-g">Instagram</a>
+      <a href="https://tiktok.com/@alpha_plomberie45" target="_blank" rel="noopener" class="btn-g">TikTok</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Alpha<em>Plomberie</em></div>
+      <p class="footer-desc">Artisan plombier chauffagiste à Ingré, intervenant sur tout le Loiret depuis plus de 20 ans.</p>
+      <div class="footer-contact">
+        <a href="tel:+33633302134">06 33 30 21 34</a>
+        <a>120 rue de Monpatour, 45140 Ingré</a>
+        <a href="https://instagram.com/plombiersansfiltre/" target="_blank" rel="noopener">Instagram &mdash; @plombiersansfiltre</a>
+        <a href="https://tiktok.com/@alpha_plomberie45" target="_blank" rel="noopener">TikTok &mdash; @alpha_plomberie45</a>
+      </div>
+    </div>
+    <div class="fc"><h4>Services</h4><ul><li><a href="#services">Installation plomberie</a></li><li><a href="#services">Réparation de fuites</a></li><li><a href="#services">Débouchage</a></li><li><a href="#services">Salle de bains</a></li></ul></div>
+    <div class="fc"><h4>Chauffage</h4><ul><li><a href="#services">Chaudières gaz</a></li><li><a href="#services">Chauffe-eau</a></li><li><a href="#services">Adoucisseur</a></li><li><a href="#contact">Urgences</a></li></ul></div>
+    <div class="fc"><h4>Partenaires</h4><ul><li><a href="https://www.cedeo.fr/" target="_blank" rel="noopener">Cedeo</a></li><li><a href="https://www.grohe.fr/" target="_blank" rel="noopener">Grohe</a></li><li><a href="https://www.thermor.fr/" target="_blank" rel="noopener">Thermor</a></li><li><a href="#realisations">Réalisations</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Alpha Plomberie &mdash; Ingré (45140)</span>
+    <div style="display:flex;gap:1.5rem"><a href="#">Mentions légales</a><a href="#">Vie privée</a></div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('[data-reveal]').forEach(function(el) { obs.observe(el); });
+
+var heroImg = document.getElementById('heroImg');
+if (heroImg) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY < window.innerHeight * 1.3)
+      heroImg.style.transform = 'translateY(' + (window.scrollY * 0.18) + 'px)';
+  }, { passive: true });
+}
+
+var ctaImg = document.getElementById('ctaImg');
+if (ctaImg) {
+  var ctaSec = ctaImg.closest('.cta-section');
+  window.addEventListener('scroll', function() {
+    var r = ctaSec.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) {
+      var p = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+      ctaImg.style.transform = 'translateY(' + ((p - 0.5) * 70) + 'px)';
+    }
+  }, { passive: true });
+}
+</script>
+</body>
+</html>
